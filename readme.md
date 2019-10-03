@@ -1,3 +1,14 @@
+## Create Auth 
+<ul><b>В Larvel 6 убрали artisan команду, которая до этой версии была умалчанию. Чтобы включить авторизацию необходимо проделать следующие действия:</b>
+ <li>Добавить в Comand Line Tool Support два алиаса: <b>с - composer(Composer), a - artisan(Tool based on Symfony console)</b></li> 
+ <li>Выполнить команду <b>c require laravel/ui</b></li>
+ <li>Выполнить команду <b>a uui vue --auth</b></li>
+ <li>Выполнить команду <b>npm install</b></b></li>
+</ul>
+
+
+
+
 <p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
 
 <p align="center">
