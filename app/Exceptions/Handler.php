@@ -46,6 +46,13 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $exception)
     {
+        /*bas modify method for role and permissions*/
+        if ($exception instanceof \Spatie\Permission\Exceptions\UnauthorizedException) {
+            return response()->json(['User have not permission for this page access.']);
+        }
+        /*bas*/
+
         return parent::render($request, $exception);
     }
+
 }

@@ -39,6 +39,8 @@ class HomeController extends Controller
        // $permission = Permission::findById(2);
        // $role = Role::findById(1);
       //  $role->givePermissionTo($permission);
-        return auth()->user()->getAllPermissions();
+      //  return auth()->user()->getAllPermissions();
+
+        return view('home');
     }
 }
