@@ -15,6 +15,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -25,4 +27,8 @@ Route::group(['middleware' => ['auth']], function() {
     Route::resource('products','ProductController');
 });
 
-
+// тестовый марщрут
+Route::get('/test', function () {
+    $v= \App\User::findOrFail(1)->name_email;
+    return view('test.test',compact('v'));
+});

@@ -69,4 +69,8 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+    // Читатели (Accessors)
+    public function getNameEmailAttribute(){
+        return "{$this->name} {$this->email} {$this->password}";
+    }
 }
