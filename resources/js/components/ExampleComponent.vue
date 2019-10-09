@@ -7,6 +7,18 @@
 
                     <div class="card-body">
                         I'm an example component.
+                        <br/>
+                        <b>{{title}}</b>
+
+                        <ul id="example-1">
+                            <li v-for="item in  items">
+                                {{ item.message }}
+                            </li>
+
+                            <li v-for="ar in   JSON.stringify(arss)">
+                                {{ ar }}
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -16,8 +28,22 @@
 
 <script>
     export default {
+
+        props: {
+            title:String,
+            arss:String
+        },
+        data(){
+            return {
+                arrr: arss,
+                items: [
+                    {message: 'Foo'},
+                    {message: 'Bar'}
+                ]
+            }
+        },
         mounted() {
-            console.log('Component mounted.')
+            console.log(arrr)
         }
     }
 </script>

@@ -23,6 +23,7 @@
 <div id="app">
     <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
         <div class="container">
+            <example-component></example-component>
             <a class="navbar-brand" href="{{ url('/') }}">
                 Laravel 5.8 User Roles and Permissions - ItSolutionStuff.com
             </a>

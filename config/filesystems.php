@@ -54,6 +54,13 @@ return [
             'url' => env('APP_URL').'/storage',
             'visibility' => 'public',
         ],
+/* basket path*/
+        'migrate' => [
+            'driver' => 'local',
+            'root' =>app('app')->basePath().'/database/migrations',
+            'url' => env('APP_URL').'/database/migrations',
+            'visibility' => 'public',
+        ],
 
         's3' => [
             'driver' => 's3',

@@ -1,4 +1,6 @@
+@extends('layouts.app')
 <head>
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>Basic EnlighterJS Example | EnlighterJS</title>
@@ -13,13 +15,38 @@
           data-indent="2" data-selector-block="pre" data-selector-inline="code"/>
 </head>
 <body>
+
+<div id="app">
+    <?php $sjson = json_encode($ars); ?>
+    <h1>{{$sjson}}</h1>>
+    {{--<example-component title="{{$test}}" ars="{{$sjson }}"></example-component>--}}
+    <example-component title="{{$test}}" arss="{{$sjson}}"></example-component>
+<br>
+</div>
 <!-- Begin page content -->
 <div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Migrations:</strong>
+
+                <select class="browser-default custom-select">
+                    @foreach($files as $file)
+                        <option value="{{$loop->iteration}}"> {{$file}}</option>
+                    @endforeach
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <a class="btn btn-primary" href="/artisan_create_migrate"> Create migration</a>
+    <a class="btn btn-primary" href="/artisan_migrate"> Create migration</a>
     <div class="page-header">
         <h1>
             Basic EnlighterJS Example </h1>
     </div>
     <div id="content">
+
         <!-- ############################################################# -->
         <div class="alert alert-success" role="alert">Level: <strong>Beginner</strong></div>
 
@@ -33,6 +60,12 @@ $('#loading-example-btn').click(function () {
 		btn.button('reset')
 	});
 });
+
+</pre>
+        {{--<pre data-enlighter-language="php" data-enlighter-highlight="5">--}}
+         {{--@foreach($files as $file)--}}
+                {{--{{$file}}--}}
+            {{--@endforeach--}}
 </pre>
 
         <h4>Code-Tabs</h4>
@@ -59,20 +92,16 @@ EnlighterJS.Util.Helper(document.getElements('pre'), {
 });
 </pre>
 
-
-        <pre data-enlighter-language="php" data-enlighter-highlight="1,2,5"   data-enlighter-group="group1">
+        <pre data-enlighter-language="php" data-enlighter-highlight="1,2,5" data-enlighter-group="group1">
 
 Route::group(['middleware' => ['auth']], function() {
     Route::resource('roles','RoleController');
     Route::resource('users','UserController');
     Route::resource('products','ProductController');
 });
-            return $v={{$v}}
 </pre>
-
-
-
+    </div>
 </div>
-<!-- // container -->
+
 </body>
 

@@ -29,6 +29,21 @@ Route::group(['middleware' => ['auth']], function() {
 
 // тестовый марщрут
 Route::get('/test', function () {
-    $v= \App\User::findOrFail(1)->name_email;
-    return view('test.test',compact('v'));
-});
+   $v= \App\User::findOrFail(1)->name_email;
+ //  dd(app('app')->basePath());
+  $files= Storage::disk('migrate')->allFiles();
+  $test='test var';
+  $ars=$files;
+ return view('test.test', compact('files','test','ars'));
+
+})->name('test');
+
+
+Route::get('/artisan_create_migrate', function (){
+    Artisan::call('make:migration CreateQuestionsTable');
+})->name('artisan_create_migrate');
+
+
+Route::get('/artisan_migrate', function (){
+    Artisan::call('migrate');
+})->name('artisan_migrate');
