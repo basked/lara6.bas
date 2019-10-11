@@ -1,24 +1,43 @@
 <template>
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-8">
+            <div class="col-md-12">
                 <div class="card">
-                    <div class="card-header">Example Component</div>
-
+                    <div class="card-header">Migrations</div>
                     <div class="card-body">
-                        I'm an example component.
-                        <br/>
-                        <b>{{title}}</b>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12">
+                                <div class="form-group">
+                                    <select class="browser-default custom-select" @change="onChange">
+                                        <option v-for="(migration,index) in migrations" :value="migration">
+                                            {{migration}}
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
 
-                        <ul id="example-1">
-                            <li v-for="item in  items">
-                                {{ item.message }}
-                            </li>
+                            <div class="form-group">
+                                <label for="exampleFormControlTextarea1">Code migration</label>
+                                <textarea  readoly class="col-xs-12 col-sm-12 col-md-12" id="exampleFormControlTextarea1" rows="20" >{{text_migration}}</textarea>
+                            </div>
 
-                            <li v-for="ar in   JSON.stringify(arss)">
-                                {{ ar }}
-                            </li>
-                        </ul>
+
+                   <!--<pre data-enlighter-language="php">-->
+                             <!--<pre>-->
+                                 <!--{{text_migration}}-->
+                            <!--</pre>-->
+                       <!--<pre  data-enlighter-language="php" data-enlighter-highlight="1,2,5">-->
+
+                       <!--{{text_migration}}-->
+
+                         <!--</pre>-->
+
+                    </div>
+                    <div class="card-footer">
+                        <!--<a class="btn btn-primary" href="/artisan_create_migrate"> Create migration</a>-->
+                        <!--<a class="btn btn-primary" href="/artisan_migrate"> Migrate</a>-->
+                        <button class="btn btn-primary" @click="getMigrations">Обновить миграции</button>
                     </div>
                 </div>
             </div>
@@ -28,22 +47,35 @@
 
 <script>
     export default {
-
-        props: {
-            title:String,
-            arss:String
+        mounted() {
+            console.log('Mouted');
+            this.getMigrations();
         },
-        data(){
+        data() {
             return {
-                arrr: arss,
-                items: [
-                    {message: 'Foo'},
-                    {message: 'Bar'}
-                ]
+                text_migration: "",
+                migrations: "",
             }
         },
-        mounted() {
-            console.log(arrr)
+        methods: {
+            onChange(event) {
+                console.log(event.target.value);
+                this.getMigration(event.target.value);
+            },
+            getMigrations() {
+                axios.get(`api/migrations`).then(response => {
+                    this.migrations = response.data;
+                    console.log(this.migrations);
+                });
+
+            },
+            getMigration(migration) {
+                axios.get(`api/migration/` + migration).then(response => {
+                    this.text_migration =response.data;
+                    console.log(this.text_migration);
+                });
+
+            }
         }
     }
 </script>

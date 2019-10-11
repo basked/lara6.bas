@@ -30,7 +30,7 @@ Route::group(['middleware' => ['auth']], function() {
 // тестовый марщрут
 Route::get('/test', function () {
    $v= \App\User::findOrFail(1)->name_email;
- //  dd(app('app')->basePath());
+
   $files= Storage::disk('migrate')->allFiles();
   $test='test var';
   $ars=$files;

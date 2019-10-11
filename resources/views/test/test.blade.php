@@ -12,15 +12,14 @@
     <script type="text/javascript" src="../js/EnlighterJS.min.js"></script>
     {{--Include meta Requure--}}
     <meta name="EnlighterJS" content="Advanced javascript based syntax highlighting" data-language="javascript"
-          data-indent="2" data-selector-block="pre" data-selector-inline="code"/>
+          data-indent="2" data-selector-block="pred" data-selector-inline="code"/>
 </head>
 <body>
 
 <div id="app">
-    <?php $sjson = json_encode($ars); ?>
-    <h1>{{$sjson}}</h1>>
-    {{--<example-component title="{{$test}}" ars="{{$sjson }}"></example-component>--}}
-    <example-component title="{{$test}}" arss="{{$sjson}}"></example-component>
+    <example-component></example-component>
+    {{--<migrations-component title="{{$test}}" :migrations="{{json_encode($ars)}}"></migrations-component>--}}
+{{--    <example-component title="{{$test}}" :migrations="@json($ars)"></example-component>--}}
 <br>
 </div>
 <!-- Begin page content -->
@@ -52,7 +51,7 @@
 
         <h3>Some Examples</h3>
         <h4>jQuery Code (Javascript) - highlighted by EnlighterJS</h4>
-        <pre data-enlighter-language="jquery" data-enlighter-highlight="5">
+        <pred data-enlighter-language="jquery" data-enlighter-highlight="5">
 $('#loading-example-btn').click(function () {
 	var btn = $(this)
 	btn.button('loading')
@@ -61,15 +60,15 @@ $('#loading-example-btn').click(function () {
 	});
 });
 
-</pre>
+</pred>
         {{--<pre data-enlighter-language="php" data-enlighter-highlight="5">--}}
          {{--@foreach($files as $file)--}}
                 {{--{{$file}}--}}
             {{--@endforeach--}}
-</pre>
+
 
         <h4>Code-Tabs</h4>
-        <pre data-enlighter-language="jquery" data-enlighter-highlight="5" data-enlighter-group="group1">
+        <pred data-enlighter-language="jquery" data-enlighter-highlight="5" data-enlighter-group="group1">
 $('#loading-example-btn').click(function () {
 	var btn = $(this)
 	btn.button('loading')
@@ -77,8 +76,8 @@ $('#loading-example-btn').click(function () {
 		btn.button('reset')
 	});
 });
-</pre>
-        <pre data-enlighter-language="mootools" data-enlighter-highlight="1" data-enlighter-group="group1">
+</pred>
+        <pred data-enlighter-language="mootools" data-enlighter-highlight="1" data-enlighter-group="group1">
 // initialize enlighterjs for block elements
 EnlighterJS.Util.Helper(document.getElements('pre'), {
 	// replace tabs with 2 spaces
@@ -90,16 +89,16 @@ EnlighterJS.Util.Helper(document.getElements('pre'), {
 	// block element renderer
 	renderer: 'Block'
 });
-</pre>
+</pred>
 
-        <pre data-enlighter-language="php" data-enlighter-highlight="1,2,5" data-enlighter-group="group1">
+        <pred data-enlighter-language="php" data-enlighter-highlight="1,2,5" data-enlighter-group="group1">
 
 Route::group(['middleware' => ['auth']], function() {
     Route::resource('roles','RoleController');
     Route::resource('users','UserController');
     Route::resource('products','ProductController');
 });
-</pre>
+</pred>
     </div>
 </div>
 

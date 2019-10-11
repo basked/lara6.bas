@@ -1,0 +1,951 @@
+<body id="salesviewer" cz-shortcut-listen="true">
+<div id="gadsf21g"></div>
+<div class="page-content-wrapper">
+    <div class="page-content-push"></div>
+    <div id="header">
+        <div class="content">
+            <a class="logo indent" href="/Demos/SalesViewer/"></a>
+
+            <div class="menu">
+                <div id="menu"
+                     class="dx-menu dx-widget dx-visibility-change-handler dx-collection dx-menu-base top-menu"
+                     tabindex="0" aria-activedescendant="dx-83052318-6bdc-87bb-1174-2b55e17ec185" role="menubar"
+                     style="height: 60px;">
+                    <div class="dx-menu-horizontal">
+                        <ul class="dx-menu-items-container dx-menu-no-icons">
+                            <li class="dx-menu-item-wrapper">
+                                <div class="dx-item dx-menu-item" role="menuitem" tabindex="-1" aria-haspopup="true">
+                                    <div class="dx-item-content dx-menu-item-content">
+                                        <div class="top-menu-item top-menu-first" style="width: 250px;">Dashboard</div>
+                                    </div>
+                                    <div class="dx-context-menu dx-has-context-menu dx-widget dx-visibility-change-handler dx-collection top-menu">
+                                        <div class="dx-overlay dx-widget dx-visibility-change-handler dx-state-invisible">
+                                            <div class="dx-overlay-content dx-inner-overlay dx-resizable dx-context-menu top-menu dx-menu-base dx-state-invisible"
+                                                 aria-activedescendant="dx-af67b2e2-c742-b80c-fa7a-0bb1b86b0084"
+                                                 style="width: auto; height: auto; z-index: 1501; margin: 0px; left: 0px; top: 0px; transform: translate(927px, 60px); transition: none 0s ease 0s; visibility: visible; opacity: 0;"
+                                                 role="menu" aria-hidden="true">
+                                                <div class="dx-submenu" style="visibility: visible;">
+                                                    <ul class="dx-menu-items-container dx-menu-no-icons">
+                                                        <li class="dx-menu-item-wrapper">
+                                                            <div class="dx-item dx-menu-item" role="menuitem"
+                                                                 tabindex="-1">
+                                                                <div class="dx-item-content dx-menu-item-content">
+                                                                    <div class="top-submenu-item not-last"
+                                                                         style="width: 246px;">Revenue by Product
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="dx-menu-item-wrapper">
+                                                            <div class="dx-item dx-menu-item" role="menuitem"
+                                                                 tabindex="-1">
+                                                                <div class="dx-item-content dx-menu-item-content">
+                                                                    <div class="top-submenu-item not-last"
+                                                                         style="width: 246px;">Revenue by Sector
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="dx-menu-item-wrapper">
+                                                            <div class="dx-item dx-menu-item" role="menuitem"
+                                                                 tabindex="-1">
+                                                                <div class="dx-item-content dx-menu-item-content">
+                                                                    <div class="top-submenu-item" style="width: 246px;">
+                                                                        Revenue by Channels
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="dx-context-menu-content-delimiter"
+                                                     style="display: block; width: 258px; height: 2px; left: 0px; top: 0px; transform: translate(928px, 59px); transition: all 0s ease 0s;"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="dx-context-menu-container-border" style="display: none;"></div>
+                                </div>
+                            </li>
+                            <li class="dx-menu-item-wrapper">
+                                <div class="dx-item dx-menu-item dx-menu-item-selected" role="menuitem" tabindex="-1">
+                                    <div class="dx-item-content dx-menu-item-content">
+                                        <div class="top-menu-item">Products</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="dx-menu-item-wrapper">
+                                <div class="dx-item dx-menu-item" role="menuitem" tabindex="-1">
+                                    <div class="dx-item-content dx-menu-item-content">
+                                        <div class="top-menu-item">Sales</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="dx-menu-item-wrapper">
+                                <div class="dx-item dx-menu-item" role="menuitem" tabindex="-1">
+                                    <div class="dx-item-content dx-menu-item-content">
+                                        <div class="top-menu-item">Customers</div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="openPopupButton">
+                    <a><span class="info-link">?</span></a>
+                </div>
+
+            </div>
+            <script>
+                var activePageId = "" || "Products",
+                    topMenu = new SaleViewer.TopMenu($("#menu"), activePageId, "");
+                topMenu.init();
+            </script>
+        </div>
+
+    </div>
+
+
+    <link rel="stylesheet" href="/Demos/SalesViewer/css/products.css">
+
+    <div class="white">
+        <div class="content">
+            <div class="page">
+                <div class="layout-box">
+                    <h3 class="indent">PRODUCTS</h3>
+                    <div class="hb-3">
+                        <div id="grid" class="products dx-widget dx-visibility-change-handler" role="presentation">
+                            <div class="dx-datagrid dx-gridbase-container" role="grid" aria-label="Data grid"
+                                 aria-rowcount="6" aria-colcount="6">
+                                <div class="dx-hidden"></div>
+                                <div class="dx-hidden"></div>
+                                <div class="dx-hidden"></div>
+                                <div class="dx-hidden"></div>
+                                <div class="dx-datagrid-headers dx-datagrid-nowrap" role="presentation"
+                                     style="padding-right: 0px;">
+                                    <div class="dx-datagrid-content dx-datagrid-scroll-container" role="presentation">
+                                        <table class="dx-datagrid-table dx-datagrid-table-fixed" role="presentation">
+                                            <colgroup>
+                                                <col style="width: 15%;">
+                                                <col style="width: 30%;">
+                                                <col style="width: 10%;">
+                                                <col style="width: 10%;">
+                                                <col style="width: 15%;">
+                                                <col style="width: 20%;">
+                                            </colgroup>
+                                            <tbody role="presentation">
+                                            <tr class="dx-row dx-header-row" role="row">
+                                                <td aria-selected="false" role="columnheader" aria-colindex="1"
+                                                    id="dx-col-7" aria-label="Column Name"
+                                                    class="dx-datagrid-action dx-cell-focus-disabled" aria-sort="none"
+                                                    tabindex="0" style="text-align: left;">
+                                                    <div class="dx-datagrid-text-content dx-text-content-alignment-left"
+                                                         role="presentation">Name
+                                                    </div>
+                                                    <div class="dx-column-indicators" role="presentation"><span
+                                                            class="dx-sort dx-sort-none"></span></div>
+                                                </td>
+                                                <td aria-selected="false" role="columnheader" aria-colindex="2"
+                                                    id="dx-col-8" aria-label="Column Description"
+                                                    class="dx-datagrid-action dx-cell-focus-disabled" aria-sort="none"
+                                                    tabindex="0" style="text-align: left;">
+                                                    <div class="dx-datagrid-text-content dx-text-content-alignment-left"
+                                                         role="presentation">Description
+                                                    </div>
+                                                    <div class="dx-column-indicators" role="presentation"><span
+                                                            class="dx-sort dx-sort-none"></span></div>
+                                                </td>
+                                                <td aria-selected="false" role="columnheader" aria-colindex="3"
+                                                    id="dx-col-9" aria-label="Column Base Cost"
+                                                    class="dx-datagrid-action dx-cell-focus-disabled" aria-sort="none"
+                                                    tabindex="0" style="text-align: right;">
+                                                    <div class="dx-column-indicators" role="presentation"><span
+                                                            class="dx-sort dx-sort-none"></span></div>
+                                                    <div class="dx-datagrid-text-content dx-text-content-alignment-right"
+                                                         role="presentation">Base Cost
+                                                    </div>
+                                                </td>
+                                                <td aria-selected="false" role="columnheader" aria-colindex="4"
+                                                    id="dx-col-10" aria-label="Column List Price"
+                                                    class="dx-datagrid-action dx-cell-focus-disabled" aria-sort="none"
+                                                    tabindex="0" style="text-align: right;">
+                                                    <div class="dx-column-indicators" role="presentation"><span
+                                                            class="dx-sort dx-sort-none"></span></div>
+                                                    <div class="dx-datagrid-text-content dx-text-content-alignment-right"
+                                                         role="presentation">List Price
+                                                    </div>
+                                                </td>
+                                                <td aria-selected="false" role="columnheader" aria-colindex="5"
+                                                    id="dx-col-11" aria-label="Column Units In Inventory"
+                                                    class="dx-datagrid-action dx-cell-focus-disabled" aria-sort="none"
+                                                    tabindex="0" style="text-align: right;">
+                                                    <div class="dx-column-indicators" role="presentation"><span
+                                                            class="dx-sort dx-sort-none"></span></div>
+                                                    <div class="dx-datagrid-text-content dx-text-content-alignment-right"
+                                                         role="presentation">Units In Inventory
+                                                    </div>
+                                                </td>
+                                                <td aria-selected="false" role="columnheader" aria-colindex="6"
+                                                    id="dx-col-12" aria-label="Column Units In Manufacturing"
+                                                    class="dx-datagrid-action dx-cell-focus-disabled" aria-sort="none"
+                                                    tabindex="0" style="text-align: right;">
+                                                    <div class="dx-column-indicators" role="presentation"><span
+                                                            class="dx-sort dx-sort-none"></span></div>
+                                                    <div class="dx-datagrid-text-content dx-text-content-alignment-right"
+                                                         role="presentation">Units In Manufacturing
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="dx-datagrid-rowsview dx-datagrid-nowrap dx-scrollable dx-visibility-change-handler dx-scrollable-both dx-scrollable-simulated dx-scrollable-customizable-scrollbars"
+                                     role="presentation">
+                                    <div class="dx-scrollable-wrapper">
+                                        <div class="dx-scrollable-container">
+                                            <div class="dx-scrollable-content"
+                                                 style="left: 0px; top: 0px; transform: none;">
+                                                <div class="dx-datagrid-content">
+                                                    <table class="dx-datagrid-table dx-datagrid-table-fixed"
+                                                           role="presentation">
+                                                        <colgroup>
+                                                            <col style="width: 15%;">
+                                                            <col style="width: 30%;">
+                                                            <col style="width: 10%;">
+                                                            <col style="width: 10%;">
+                                                            <col style="width: 15%;">
+                                                            <col style="width: 20%;">
+                                                        </colgroup>
+                                                        <tbody role="presentation">
+                                                        <tr class="dx-row dx-data-row dx-selection" role="row"
+                                                            aria-selected="true" aria-rowindex="1">
+                                                            <td aria-describedby="dx-col-7" aria-selected="false"
+                                                                role="gridcell" aria-colindex="1" tabindex="0"
+                                                                style="text-align: left;">Eco Max
+                                                            </td>
+                                                            <td aria-describedby="dx-col-8" aria-selected="false"
+                                                                role="gridcell" aria-colindex="2"
+                                                                style="text-align: left;">Low pollution industrial air
+                                                                cleaner.
+                                                            </td>
+                                                            <td aria-describedby="dx-col-9" aria-selected="false"
+                                                                role="gridcell" aria-colindex="3"
+                                                                style="text-align: right;">$2,400
+                                                            </td>
+                                                            <td aria-describedby="dx-col-10" aria-selected="false"
+                                                                role="gridcell" aria-colindex="4"
+                                                                style="text-align: right;">$2,500
+                                                            </td>
+                                                            <td aria-describedby="dx-col-11" aria-selected="false"
+                                                                role="gridcell" aria-colindex="5"
+                                                                style="text-align: right;">289
+                                                            </td>
+                                                            <td aria-describedby="dx-col-12" aria-selected="false"
+                                                                role="gridcell" aria-colindex="6"
+                                                                style="text-align: right;">11
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="dx-row dx-data-row" role="row" aria-selected="false"
+                                                            aria-rowindex="2">
+                                                            <td aria-describedby="dx-col-7" aria-selected="false"
+                                                                role="gridcell" aria-colindex="1"
+                                                                style="text-align: left;">Eco Supreme
+                                                            </td>
+                                                            <td aria-describedby="dx-col-8" aria-selected="false"
+                                                                role="gridcell" aria-colindex="2"
+                                                                style="text-align: left;">High-output air cleaner
+                                                                powered by solar.
+                                                            </td>
+                                                            <td aria-describedby="dx-col-9" aria-selected="false"
+                                                                role="gridcell" aria-colindex="3"
+                                                                style="text-align: right;">$1,850
+                                                            </td>
+                                                            <td aria-describedby="dx-col-10" aria-selected="false"
+                                                                role="gridcell" aria-colindex="4"
+                                                                style="text-align: right;">$2,000
+                                                            </td>
+                                                            <td aria-describedby="dx-col-11" aria-selected="false"
+                                                                role="gridcell" aria-colindex="5"
+                                                                style="text-align: right;"><b>-14</b></td>
+                                                            <td aria-describedby="dx-col-12" aria-selected="false"
+                                                                role="gridcell" aria-colindex="6"
+                                                                style="text-align: right;">54
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="dx-row dx-data-row" role="row" aria-selected="false"
+                                                            aria-rowindex="3">
+                                                            <td aria-describedby="dx-col-7" aria-selected="false"
+                                                                role="gridcell" aria-colindex="1"
+                                                                style="text-align: left;">EnviroCare
+                                                            </td>
+                                                            <td aria-describedby="dx-col-8" aria-selected="false"
+                                                                role="gridcell" aria-colindex="2"
+                                                                style="text-align: left;">Consumer air filtration and
+                                                                vent system.
+                                                            </td>
+                                                            <td aria-describedby="dx-col-9" aria-selected="false"
+                                                                role="gridcell" aria-colindex="3"
+                                                                style="text-align: right;">$1,600
+                                                            </td>
+                                                            <td aria-describedby="dx-col-10" aria-selected="false"
+                                                                role="gridcell" aria-colindex="4"
+                                                                style="text-align: right;">$1,750
+                                                            </td>
+                                                            <td aria-describedby="dx-col-11" aria-selected="false"
+                                                                role="gridcell" aria-colindex="5"
+                                                                style="text-align: right;">50
+                                                            </td>
+                                                            <td aria-describedby="dx-col-12" aria-selected="false"
+                                                                role="gridcell" aria-colindex="6"
+                                                                style="text-align: right;">40
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="dx-row dx-data-row" role="row" aria-selected="false"
+                                                            aria-rowindex="4">
+                                                            <td aria-describedby="dx-col-7" aria-selected="false"
+                                                                role="gridcell" aria-colindex="1"
+                                                                style="text-align: left;">EnviroCare Max
+                                                            </td>
+                                                            <td aria-describedby="dx-col-8" aria-selected="false"
+                                                                role="gridcell" aria-colindex="2"
+                                                                style="text-align: left;">Industrial environmental
+                                                                control system.
+                                                            </td>
+                                                            <td aria-describedby="dx-col-9" aria-selected="false"
+                                                                role="gridcell" aria-colindex="3"
+                                                                style="text-align: right;">$2,700
+                                                            </td>
+                                                            <td aria-describedby="dx-col-10" aria-selected="false"
+                                                                role="gridcell" aria-colindex="4"
+                                                                style="text-align: right;">$2,800
+                                                            </td>
+                                                            <td aria-describedby="dx-col-11" aria-selected="false"
+                                                                role="gridcell" aria-colindex="5"
+                                                                style="text-align: right;">150
+                                                            </td>
+                                                            <td aria-describedby="dx-col-12" aria-selected="false"
+                                                                role="gridcell" aria-colindex="6"
+                                                                style="text-align: right;">13
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="dx-row dx-data-row" role="row" aria-selected="false"
+                                                            aria-rowindex="5">
+                                                            <td aria-describedby="dx-col-7" aria-selected="false"
+                                                                role="gridcell" aria-colindex="1"
+                                                                style="text-align: left;">SolarOne
+                                                            </td>
+                                                            <td aria-describedby="dx-col-8" aria-selected="false"
+                                                                role="gridcell" aria-colindex="2"
+                                                                style="text-align: left;">Environmentally friendly power
+                                                                generation.
+                                                            </td>
+                                                            <td aria-describedby="dx-col-9" aria-selected="false"
+                                                                role="gridcell" aria-colindex="3"
+                                                                style="text-align: right;">$1,350
+                                                            </td>
+                                                            <td aria-describedby="dx-col-10" aria-selected="false"
+                                                                role="gridcell" aria-colindex="4"
+                                                                style="text-align: right;">$1,500
+                                                            </td>
+                                                            <td aria-describedby="dx-col-11" aria-selected="false"
+                                                                role="gridcell" aria-colindex="5"
+                                                                style="text-align: right;">100
+                                                            </td>
+                                                            <td aria-describedby="dx-col-12" aria-selected="false"
+                                                                role="gridcell" aria-colindex="6"
+                                                                style="text-align: right;">14
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="dx-row dx-data-row" role="row" aria-selected="false"
+                                                            aria-rowindex="6">
+                                                            <td aria-describedby="dx-col-7" aria-selected="false"
+                                                                role="gridcell" aria-colindex="1"
+                                                                style="text-align: left;">SolarMax
+                                                            </td>
+                                                            <td aria-describedby="dx-col-8" aria-selected="false"
+                                                                role="gridcell" aria-colindex="2"
+                                                                style="text-align: left;">Consumer targeted solar power
+                                                                cell.
+                                                            </td>
+                                                            <td aria-describedby="dx-col-9" aria-selected="false"
+                                                                role="gridcell" aria-colindex="3"
+                                                                style="text-align: right;">$1,150
+                                                            </td>
+                                                            <td aria-describedby="dx-col-10" aria-selected="false"
+                                                                role="gridcell" aria-colindex="4"
+                                                                style="text-align: right;">$2,250
+                                                            </td>
+                                                            <td aria-describedby="dx-col-11" aria-selected="false"
+                                                                role="gridcell" aria-colindex="5"
+                                                                style="text-align: right;">67
+                                                            </td>
+                                                            <td aria-describedby="dx-col-12" aria-selected="false"
+                                                                role="gridcell" aria-colindex="6"
+                                                                style="text-align: right;">6
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="dx-row dx-freespace-row" role="presentation"
+                                                            style="height: 7px;">
+                                                            <td style="text-align: left;"></td>
+                                                            <td style="text-align: left;"></td>
+                                                            <td style="text-align: right;"></td>
+                                                            <td style="text-align: right;"></td>
+                                                            <td style="text-align: right;"></td>
+                                                            <td style="text-align: right;"></td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <div class="dx-scrollable-scrollbar dx-widget dx-scrollbar-horizontal dx-scrollbar-hoverable"
+                                                 style="display: none;">
+                                                <div class="dx-scrollable-scroll dx-state-invisible"
+                                                     style="width: 1200px; transform: translate(0px, 0px);">
+                                                    <div class="dx-scrollable-scroll-content"></div>
+                                                </div>
+                                            </div>
+                                            <div class="dx-scrollable-scrollbar dx-widget dx-scrollbar-vertical dx-scrollbar-hoverable"
+                                                 style="display: none;">
+                                                <div class="dx-scrollable-scroll dx-state-invisible"
+                                                     style="height: 247px; transform: translate(0px, 0px);">
+                                                    <div class="dx-scrollable-scroll-content"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <span class="dx-datagrid-nodata dx-hidden"></span></div>
+                                <div class="dx-hidden" style="padding-right: 0px;"></div>
+                                <div></div>
+                                <div class="dx-hidden"></div>
+                                <div class="dx-hidden"></div>
+                                <div class="dx-datagrid-drag-header dx-datagrid-text-content dx-widget"
+                                     style="display: none;"></div>
+                                <div class="dx-context-menu dx-has-context-menu dx-widget dx-visibility-change-handler dx-collection dx-datagrid"
+                                     role="presentation"></div>
+                                <div class="dx-header-filter-menu"></div>
+                                <div></div>
+                                <div class="dx-overlay dx-widget dx-visibility-change-handler dx-loadpanel dx-state-invisible">
+                                    <div class="dx-overlay-content dx-resizable dx-loadpanel-content dx-state-invisible"
+                                         style="width: 200px; height: 90px; z-index: 1501; margin: 0px; left: 0px; top: 0px; transform: translate(500px, 98px); transition: all 0s ease 0s;"
+                                         aria-hidden="true">
+                                        <div class="dx-loadpanel-content-wrapper">
+                                            <div class="dx-loadpanel-indicator dx-loadindicator dx-widget">
+                                                <div class="dx-loadindicator-wrapper">
+                                                    <div class="dx-loadindicator-content">
+                                                        <div class="dx-loadindicator-icon">
+                                                            <div class="dx-loadindicator-segment dx-loadindicator-segment7"></div>
+                                                            <div class="dx-loadindicator-segment dx-loadindicator-segment6"></div>
+                                                            <div class="dx-loadindicator-segment dx-loadindicator-segment5"></div>
+                                                            <div class="dx-loadindicator-segment dx-loadindicator-segment4"></div>
+                                                            <div class="dx-loadindicator-segment dx-loadindicator-segment3"></div>
+                                                            <div class="dx-loadindicator-segment dx-loadindicator-segment2"></div>
+                                                            <div class="dx-loadindicator-segment dx-loadindicator-segment1"></div>
+                                                            <div class="dx-loadindicator-segment dx-loadindicator-segment0"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="dx-loadpanel-message">Loading...</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="products-bottom page">
+            <div class="hb-4">
+                <div class="lb-3 indent">
+                    <h5>Manufacturing Plant</h5>
+                    <div class="plant-description" id="plant">Harrisburg<br>188 Market Street<br>Harrisburg, VA 00098
+                    </div>
+                    <h5>Project Manager</h5>
+                    <div class="plant-description" id="pManager">John Smith<br>188 Market Street<br>Harrisburg, VA 00098<br>(212)
+                        555-2321<br>jsmith@harrisburg.com
+                    </div>
+                </div>
+
+                <div class="products-pie-container">
+                    <div class="lb-4 products-pie">
+                        <div class="doughnut-content dashboard-bottom performance-title dashboard-bottom-products">
+                            <div class="performance-text">REVENUES<br>BY SECTOR</div>
+                        </div>
+                        <div id="pie-sectors" class="dx-visibility-change-handler">
+                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" fill="none" stroke="none"
+                                 stroke-width="0" class="dxc dxc-chart"
+                                 style="line-height:normal;-ms-user-select:none;-moz-user-select:none;-webkit-user-select:none;-webkit-tap-highlight-color:rgba(0, 0, 0, 0);display:block;overflow:hidden;"
+                                 width="240" height="310" direction="ltr">
+                                <defs>
+                                    <filter id="DevExpress_1" x="-50%" y="-50%" width="200%" height="200%"
+                                            transform="translate(0,0)">
+                                        <feGaussianBlur in="SourceGraphic" result="gaussianBlurResult"
+                                                        stdDeviation="3"></feGaussianBlur>
+                                        <feOffset in="gaussianBlurResult" result="offsetResult" dx="2"
+                                                  dy="6"></feOffset>
+                                        <feFlood result="floodResult" flood-color="" flood-opacity="0.8"></feFlood>
+                                        <feComposite in="floodResult" in2="offsetResult" operator="in"
+                                                     result="compositeResult"></feComposite>
+                                        <feComposite in="SourceGraphic" in2="compositeResult"
+                                                     operator="over"></feComposite>
+                                    </filter>
+                                    <clipPath id="DevExpress_2">
+                                        <rect x="0" y="0" width="240" height="310" transform="translate(0,0)"></rect>
+                                    </clipPath>
+                                </defs>
+                                <rect x="0" y="0" width="240" height="310" transform="translate(0,0)" fill="gray"
+                                      opacity="0.0001"></rect>
+                                <g class="dxc-background"></g>
+                                <g class="dxc-series-group">
+                                    <g class="dxc-series">
+                                        <g class="dxc-markers">
+                                            <path d="M 195.41802 204.13696 A 116.00000 116.00000 0 0 0 236.00000 116.00000 L 191.00000 116.00000 A 71.00000 71.00000 0 0 1 166.16103 169.94590 Z"
+                                                  transform="translate(0,0)" stroke-linejoin="round" fill="#da5859"
+                                                  stroke="#ffffff" stroke-width="0"></path>
+                                            <path d="M 45.91714 205.26215 A 116.00000 116.00000 0 0 0 195.41802 204.13696 L 166.16103 169.94590 A 71.00000 71.00000 0 0 1 74.65618 170.63459 Z"
+                                                  transform="translate(0,0)" stroke-linejoin="round" fill="#f09777"
+                                                  stroke="#ffffff" stroke-width="0"></path>
+                                            <path d="M 5.16909 99.57254 A 116.00000 116.00000 0 0 0 45.91714 205.26215 L 74.65618 170.63459 A 71.00000 71.00000 0 0 1 49.71556 105.94526 Z"
+                                                  transform="translate(0,0)" stroke-linejoin="round" fill="#fbc987"
+                                                  stroke="#ffffff" stroke-width="0"></path>
+                                            <path d="M 57.15908 18.49606 A 116.00000 116.00000 0 0 0 5.16909 99.57254 L 49.71556 105.94526 A 71.00000 71.00000 0 0 1 81.53702 56.32086 Z"
+                                                  transform="translate(0,0)" stroke-linejoin="round" fill="#a5d7d0"
+                                                  stroke="#ffffff" stroke-width="0"></path>
+                                            <path d="M 184.68989 19.71284 A 116.00000 116.00000 0 0 0 57.15908 18.49606 L 81.53702 56.32086 A 71.00000 71.00000 0 0 1 159.59467 57.06561 Z"
+                                                  transform="translate(0,0)" stroke-linejoin="round" fill="#a5bdd7"
+                                                  stroke="#ffffff" stroke-width="0"></path>
+                                            <path d="M 236.00000 116.00000 A 116.00000 116.00000 0 0 0 184.68989 19.71284 L 159.59467 57.06561 A 71.00000 71.00000 0 0 1 191.00000 116.00000 Z"
+                                                  transform="translate(0,0)" stroke-linejoin="round" fill="#e97c82"
+                                                  stroke="#ffffff" stroke-width="0"></path>
+                                        </g>
+                                    </g>
+                                </g>
+                                <g class="dxc-labels-group">
+                                    <g class="dxc-labels" opacity="1" transform="translate(0,0)"></g>
+                                </g>
+                                <g class="dxc-legend" clip-path="url(#DevExpress_2)" transform="translate(0,0)">
+                                    <g transform="translate(31,242)">
+                                        <g class="dxc-item">
+                                            <rect x="0" y="0" width="12" height="12" transform="translate(0,2)"
+                                                  fill="#da5859"></rect>
+                                            <text style="white-space:pre;fill:#808080;font-family:'Segoe UI', 'Helvetica Neue', 'Trebuchet MS', Verdana, sans-serif;font-weight:400;font-size:12px;cursor:default;opacity:1;"
+                                                  x="0" y="0" transform="translate(19,13)" text-anchor="start">Banking
+                                            </text>
+                                            <rect x="0" y="0" width="12" height="12" transform="translate(0,23)"
+                                                  fill="#f09777"></rect>
+                                            <text style="white-space:pre;fill:#808080;font-family:'Segoe UI', 'Helvetica Neue', 'Trebuchet MS', Verdana, sans-serif;font-weight:400;font-size:12px;cursor:default;opacity:1;"
+                                                  x="0" y="0" transform="translate(19,34)" text-anchor="start">Energy
+                                            </text>
+                                            <rect x="0" y="0" width="12" height="12" transform="translate(0,44)"
+                                                  fill="#fbc987"></rect>
+                                            <text style="white-space:pre;fill:#808080;font-family:'Segoe UI', 'Helvetica Neue', 'Trebuchet MS', Verdana, sans-serif;font-weight:400;font-size:12px;cursor:default;opacity:1;"
+                                                  x="0" y="0" transform="translate(19,55)" text-anchor="start">Health
+                                            </text>
+                                            <rect x="0" y="0" width="12" height="12" transform="translate(82,2)"
+                                                  fill="#a5d7d0"></rect>
+                                            <text style="white-space:pre;fill:#808080;font-family:'Segoe UI', 'Helvetica Neue', 'Trebuchet MS', Verdana, sans-serif;font-weight:400;font-size:12px;cursor:default;opacity:1;"
+                                                  x="0" y="0" transform="translate(102,13)" text-anchor="start">
+                                                Insurance
+                                            </text>
+                                            <rect x="0" y="0" width="12" height="12" transform="translate(82,23)"
+                                                  fill="#a5bdd7"></rect>
+                                            <text style="white-space:pre;fill:#808080;font-family:'Segoe UI', 'Helvetica Neue', 'Trebuchet MS', Verdana, sans-serif;font-weight:400;font-size:12px;cursor:default;opacity:1;"
+                                                  x="0" y="0" transform="translate(101,34)" text-anchor="start">
+                                                Manufacturing
+                                            </text>
+                                            <rect x="0" y="0" width="12" height="12" transform="translate(82,44)"
+                                                  fill="#e97c82"></rect>
+                                            <text style="white-space:pre;fill:#808080;font-family:'Segoe UI', 'Helvetica Neue', 'Trebuchet MS', Verdana, sans-serif;font-weight:400;font-size:12px;cursor:default;opacity:1;"
+                                                  x="0" y="0" transform="translate(102,55)" text-anchor="start">Telecom
+                                            </text>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="lb-4 products-pie">
+                        <div class="doughnut-content dashboard-bottom performance-title dashboard-bottom-products">
+                            <div class="performance-text">REVENUES<br>BY REGION</div>
+                        </div>
+                        <div id="pie-regions" class="dx-visibility-change-handler">
+                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" fill="none" stroke="none"
+                                 stroke-width="0" class="dxc dxc-chart"
+                                 style="line-height:normal;-ms-user-select:none;-moz-user-select:none;-webkit-user-select:none;-webkit-tap-highlight-color:rgba(0, 0, 0, 0);display:block;overflow:hidden;"
+                                 width="282" height="310" direction="ltr">
+                                <defs>
+                                    <filter id="DevExpress_4" x="-50%" y="-50%" width="200%" height="200%"
+                                            transform="translate(0,0)">
+                                        <feGaussianBlur in="SourceGraphic" result="gaussianBlurResult"
+                                                        stdDeviation="3"></feGaussianBlur>
+                                        <feOffset in="gaussianBlurResult" result="offsetResult" dx="2"
+                                                  dy="6"></feOffset>
+                                        <feFlood result="floodResult" flood-color="" flood-opacity="0.8"></feFlood>
+                                        <feComposite in="floodResult" in2="offsetResult" operator="in"
+                                                     result="compositeResult"></feComposite>
+                                        <feComposite in="SourceGraphic" in2="compositeResult"
+                                                     operator="over"></feComposite>
+                                    </filter>
+                                    <clipPath id="DevExpress_5">
+                                        <rect x="0" y="0" width="282" height="310" transform="translate(0,0)"></rect>
+                                    </clipPath>
+                                </defs>
+                                <rect x="0" y="0" width="282" height="310" transform="translate(0,0)" fill="gray"
+                                      opacity="0.0001"></rect>
+                                <g class="dxc-background"></g>
+                                <g class="dxc-series-group">
+                                    <g class="dxc-series">
+                                        <g class="dxc-markers">
+                                            <path d="M 254.60217 139.46373 A 116.00000 116.00000 0 0 0 257.00000 116.00000 L 212.00000 116.00000 A 71.00000 71.00000 0 0 1 210.53236 130.36142 Z"
+                                                  transform="translate(0,0)" stroke-linejoin="round" fill="#da5859"
+                                                  stroke="#ffffff" stroke-width="0"></path>
+                                            <path d="M 201.47736 214.98732 A 116.00000 116.00000 0 0 0 254.60217 139.46373 L 210.53236 130.36142 A 71.00000 71.00000 0 0 1 178.01632 176.58706 Z"
+                                                  transform="translate(0,0)" stroke-linejoin="round" fill="#f09777"
+                                                  stroke="#ffffff" stroke-width="0"></path>
+                                            <path d="M 88.02052 219.19484 A 116.00000 116.00000 0 0 0 201.47736 214.98732 L 178.01632 176.58706 A 71.00000 71.00000 0 0 1 108.57291 179.16236 Z"
+                                                  transform="translate(0,0)" stroke-linejoin="round" fill="#fbc987"
+                                                  stroke="#ffffff" stroke-width="0"></path>
+                                            <path d="M 31.26912 78.38175 A 116.00000 116.00000 0 0 0 88.02052 219.19484 L 108.57291 179.16236 A 71.00000 71.00000 0 0 1 73.83713 92.97503 Z"
+                                                  transform="translate(0,0)" stroke-linejoin="round" fill="#a5d7d0"
+                                                  stroke="#ffffff" stroke-width="0"></path>
+                                            <path d="M 247.31190 69.59117 A 116.00000 116.00000 0 0 0 31.26912 78.38175 L 73.83713 92.97503 A 71.00000 71.00000 0 0 1 206.07022 87.59460 Z"
+                                                  transform="translate(0,0)" stroke-linejoin="round" fill="#a5bdd7"
+                                                  stroke="#ffffff" stroke-width="0"></path>
+                                            <path d="M 257.00000 116.00000 A 116.00000 116.00000 0 0 0 247.31190 69.59117 L 206.07022 87.59460 A 71.00000 71.00000 0 0 1 212.00000 116.00000 Z"
+                                                  transform="translate(0,0)" stroke-linejoin="round" fill="#e97c82"
+                                                  stroke="#ffffff" stroke-width="0"></path>
+                                        </g>
+                                    </g>
+                                </g>
+                                <g class="dxc-labels-group">
+                                    <g class="dxc-labels" opacity="1" transform="translate(0,0)"></g>
+                                </g>
+                                <g class="dxc-legend" clip-path="url(#DevExpress_5)" transform="translate(0,0)">
+                                    <g transform="translate(50,242)">
+                                        <g class="dxc-item">
+                                            <rect x="0" y="0" width="12" height="12" transform="translate(0,2)"
+                                                  fill="#da5859"></rect>
+                                            <text style="white-space:pre;fill:#808080;font-family:'Segoe UI', 'Helvetica Neue', 'Trebuchet MS', Verdana, sans-serif;font-weight:400;font-size:12px;cursor:default;opacity:1;"
+                                                  x="0" y="0" transform="translate(20,13)" text-anchor="start">Africa
+                                            </text>
+                                            <rect x="0" y="0" width="12" height="12" transform="translate(0,23)"
+                                                  fill="#f09777"></rect>
+                                            <text style="white-space:pre;fill:#808080;font-family:'Segoe UI', 'Helvetica Neue', 'Trebuchet MS', Verdana, sans-serif;font-weight:400;font-size:12px;cursor:default;opacity:1;"
+                                                  x="0" y="0" transform="translate(20,34)" text-anchor="start">Asia
+                                            </text>
+                                            <rect x="0" y="0" width="12" height="12" transform="translate(0,44)"
+                                                  fill="#fbc987"></rect>
+                                            <text style="white-space:pre;fill:#808080;font-family:'Segoe UI', 'Helvetica Neue', 'Trebuchet MS', Verdana, sans-serif;font-weight:400;font-size:12px;cursor:default;opacity:1;"
+                                                  x="0" y="0" transform="translate(20,55)" text-anchor="start">Australia
+                                            </text>
+                                            <rect x="0" y="0" width="12" height="12" transform="translate(86,2)"
+                                                  fill="#a5d7d0"></rect>
+                                            <text style="white-space:pre;fill:#808080;font-family:'Segoe UI', 'Helvetica Neue', 'Trebuchet MS', Verdana, sans-serif;font-weight:400;font-size:12px;cursor:default;opacity:1;"
+                                                  x="0" y="0" transform="translate(105,13)" text-anchor="start">Europe
+                                            </text>
+                                            <rect x="0" y="0" width="12" height="12" transform="translate(86,23)"
+                                                  fill="#a5bdd7"></rect>
+                                            <text style="white-space:pre;fill:#808080;font-family:'Segoe UI', 'Helvetica Neue', 'Trebuchet MS', Verdana, sans-serif;font-weight:400;font-size:12px;cursor:default;opacity:1;"
+                                                  x="0" y="0" transform="translate(105,34)" text-anchor="start">North
+                                                America
+                                            </text>
+                                            <rect x="0" y="0" width="12" height="12" transform="translate(86,44)"
+                                                  fill="#e97c82"></rect>
+                                            <text style="white-space:pre;fill:#808080;font-family:'Segoe UI', 'Helvetica Neue', 'Trebuchet MS', Verdana, sans-serif;font-weight:400;font-size:12px;cursor:default;opacity:1;"
+                                                  x="0" y="0" transform="translate(105,55)" text-anchor="start">South
+                                                America
+                                            </text>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="lb-4 products-pie">
+                        <div class="doughnut-content dashboard-bottom performance-title dashboard-bottom-products">
+                            <div class="performance-text">REVENUES<br>BY CHANNEL</div>
+                        </div>
+                        <div id="pie-channels" class="dx-visibility-change-handler">
+                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" fill="none" stroke="none"
+                                 stroke-width="0" class="dxc dxc-chart"
+                                 style="line-height:normal;-ms-user-select:none;-moz-user-select:none;-webkit-user-select:none;-webkit-tap-highlight-color:rgba(0, 0, 0, 0);display:block;overflow:hidden;"
+                                 width="240" height="310" direction="ltr">
+                                <defs>
+                                    <filter id="DevExpress_7" x="-50%" y="-50%" width="200%" height="200%"
+                                            transform="translate(0,0)">
+                                        <feGaussianBlur in="SourceGraphic" result="gaussianBlurResult"
+                                                        stdDeviation="3"></feGaussianBlur>
+                                        <feOffset in="gaussianBlurResult" result="offsetResult" dx="2"
+                                                  dy="6"></feOffset>
+                                        <feFlood result="floodResult" flood-color="" flood-opacity="0.8"></feFlood>
+                                        <feComposite in="floodResult" in2="offsetResult" operator="in"
+                                                     result="compositeResult"></feComposite>
+                                        <feComposite in="SourceGraphic" in2="compositeResult"
+                                                     operator="over"></feComposite>
+                                    </filter>
+                                    <clipPath id="DevExpress_8">
+                                        <rect x="0" y="0" width="240" height="310" transform="translate(0,0)"></rect>
+                                    </clipPath>
+                                </defs>
+                                <rect x="0" y="0" width="240" height="310" transform="translate(0,0)" fill="gray"
+                                      opacity="0.0001"></rect>
+                                <g class="dxc-background"></g>
+                                <g class="dxc-series-group">
+                                    <g class="dxc-series">
+                                        <g class="dxc-markers">
+                                            <path d="M 193.29605 205.90934 A 116.00000 116.00000 0 0 0 236.00000 116.00000 L 191.00000 116.00000 A 71.00000 71.00000 0 0 1 164.86224 171.03071 Z"
+                                                  transform="translate(0,0)" stroke-linejoin="round" fill="#da5859"
+                                                  stroke="#ffffff" stroke-width="0"></path>
+                                            <path d="M 11.58971 74.73005 A 116.00000 116.00000 0 0 0 193.29605 205.90934 L 164.86224 171.03071 A 71.00000 71.00000 0 0 1 53.64543 90.73994 Z"
+                                                  transform="translate(0,0)" stroke-linejoin="round" fill="#f09777"
+                                                  stroke="#ffffff" stroke-width="0"></path>
+                                            <path d="M 45.77614 26.85507 A 116.00000 116.00000 0 0 0 11.58971 74.73005 L 53.64543 90.73994 A 71.00000 71.00000 0 0 1 74.56988 61.43716 Z"
+                                                  transform="translate(0,0)" stroke-linejoin="round" fill="#fbc987"
+                                                  stroke="#ffffff" stroke-width="0"></path>
+                                            <path d="M 117.76790 0.02148 A 116.00000 116.00000 0 0 0 45.77614 26.85507 L 74.56988 61.43716 A 71.00000 71.00000 0 0 1 118.63380 45.01315 Z"
+                                                  transform="translate(0,0)" stroke-linejoin="round" fill="#a5d7d0"
+                                                  stroke="#ffffff" stroke-width="0"></path>
+                                            <path d="M 236.00000 116.00000 A 116.00000 116.00000 0 0 0 117.76790 0.02148 L 118.63380 45.01315 A 71.00000 71.00000 0 0 1 191.00000 116.00000 Z"
+                                                  transform="translate(0,0)" stroke-linejoin="round" fill="#a5bdd7"
+                                                  stroke="#ffffff" stroke-width="0"></path>
+                                        </g>
+                                    </g>
+                                </g>
+                                <g class="dxc-labels-group">
+                                    <g class="dxc-labels" opacity="1" transform="translate(0,0)"></g>
+                                </g>
+                                <g class="dxc-legend" clip-path="url(#DevExpress_8)" transform="translate(0,0)">
+                                    <g transform="translate(45,242)">
+                                        <g class="dxc-item">
+                                            <rect x="0" y="0" width="12" height="12" transform="translate(0,2)"
+                                                  fill="#da5859"></rect>
+                                            <text style="white-space:pre;fill:#808080;font-family:'Segoe UI', 'Helvetica Neue', 'Trebuchet MS', Verdana, sans-serif;font-weight:400;font-size:12px;cursor:default;opacity:1;"
+                                                  x="0" y="0" transform="translate(19,13)" text-anchor="start">
+                                                Consultants
+                                            </text>
+                                            <rect x="0" y="0" width="12" height="12" transform="translate(0,23)"
+                                                  fill="#f09777"></rect>
+                                            <text style="white-space:pre;fill:#808080;font-family:'Segoe UI', 'Helvetica Neue', 'Trebuchet MS', Verdana, sans-serif;font-weight:400;font-size:12px;cursor:default;opacity:1;"
+                                                  x="0" y="0" transform="translate(19,34)" text-anchor="start">Direct
+                                            </text>
+                                            <rect x="0" y="0" width="12" height="12" transform="translate(0,44)"
+                                                  fill="#fbc987"></rect>
+                                            <text style="white-space:pre;fill:#808080;font-family:'Segoe UI', 'Helvetica Neue', 'Trebuchet MS', Verdana, sans-serif;font-weight:400;font-size:12px;cursor:default;opacity:1;"
+                                                  x="0" y="0" transform="translate(19,55)" text-anchor="start">Resellers
+                                            </text>
+                                            <rect x="0" y="0" width="12" height="12" transform="translate(102,2)"
+                                                  fill="#a5d7d0"></rect>
+                                            <text style="white-space:pre;fill:#808080;font-family:'Segoe UI', 'Helvetica Neue', 'Trebuchet MS', Verdana, sans-serif;font-weight:400;font-size:12px;cursor:default;opacity:1;"
+                                                  x="0" y="0" transform="translate(121,13)" text-anchor="start">Retail
+                                            </text>
+                                            <rect x="0" y="0" width="12" height="12" transform="translate(102,23)"
+                                                  fill="#a5bdd7"></rect>
+                                            <text style="white-space:pre;fill:#808080;font-family:'Segoe UI', 'Helvetica Neue', 'Trebuchet MS', Verdana, sans-serif;font-weight:400;font-size:12px;cursor:default;opacity:1;"
+                                                  x="0" y="0" transform="translate(122,34)" text-anchor="start">VARs
+                                            </text>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hb-2">
+                <div class="lb-3">
+                    <div class="indent">
+                        <h5 class="manager">Support Manager</h5>
+                        <div class="plant-description" id="sManager">Jeff Hall<br>jeffh@harrisburg.com</div>
+                    </div>
+                </div>
+                <div class="lb-5">
+                    <div class="left-arrow" id="prevYear"></div>
+                    <div id="rangeSelector" class="dx-visibility-change-handler">
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" fill="none" stroke="none" stroke-width="0"
+                             class="dxrs dxrs-range-selector"
+                             style="line-height:normal;-ms-user-select:none;-moz-user-select:none;-webkit-user-select:none;-webkit-tap-highlight-color:rgba(0, 0, 0, 0);display:block;overflow:hidden;touch-action:pan-y;"
+                             width="984" height="90" direction="ltr">
+                            <defs>
+                                <filter id="DevExpress_10" x="-50%" y="-50%" width="200%" height="200%"
+                                        transform="translate(0,0)">
+                                    <feGaussianBlur in="SourceGraphic" result="gaussianBlurResult"
+                                                    stdDeviation="3"></feGaussianBlur>
+                                    <feOffset in="gaussianBlurResult" result="offsetResult" dx="2" dy="6"></feOffset>
+                                    <feFlood result="floodResult" flood-color="" flood-opacity="0.8"></feFlood>
+                                    <feComposite in="floodResult" in2="offsetResult" operator="in"
+                                                 result="compositeResult"></feComposite>
+                                    <feComposite in="SourceGraphic" in2="compositeResult" operator="over"></feComposite>
+                                </filter>
+                                <clipPath id="DevExpress_11">
+                                    <rect x="0" y="0" width="984" height="90" transform="translate(0,0)"></rect>
+                                </clipPath>
+                                <clipPath id="DevExpress_12">
+                                    <rect x="32" y="23" width="920" height="45" transform="translate(0,0)"></rect>
+                                </clipPath>
+                            </defs>
+                            <g class="dxrs-view" clip-path="url(#DevExpress_12)">
+                                <g class="dxrs-series-group">
+                                    <g class="dxc-series">
+                                        <g class="dxc-elements" stroke="#DA5859" stroke-width="2">
+                                            <path d="M 32 57 L 35 63 L 39 63 L 42 63 L 45 55 L 48 64 L 52 58 L 55 59 L 58 61 L 61 49 L 65 41 L 68 47 L 71 48 L 75 47 L 78 43 L 81 47 L 84 46 L 88 39 L 91 42 L 94 48 L 97 41 L 101 51 L 104 51 L 107 53 L 111 36 L 114 45 L 117 38 L 120 48 L 124 46 L 127 46 L 130 47 L 133 55 L 137 51 L 140 57 L 143 57 L 147 53 L 150 57 L 153 55 L 156 50 L 160 54 L 163 34 L 166 40 L 170 27 L 173 32 L 176 33 L 179 39 L 183 42 L 186 40 L 189 38 L 192 44 L 196 36 L 199 38 L 202 41 L 206 34 L 209 39 L 212 37 L 215 33 L 219 34 L 222 41 L 225 67 L 228 61 L 232 53 L 235 67 L 238 59 L 242 58 L 245 55 L 248 54 L 251 61 L 255 49 L 258 49 L 261 45 L 264 36 L 268 41 L 271 49 L 274 46 L 278 45 L 281 42 L 284 43 L 287 39 L 291 45 L 294 46 L 297 53 L 300 44 L 304 53 L 307 47 L 310 48 L 314 49 L 317 44 L 320 48 L 323 52 L 327 57 L 330 62 L 333 58 L 336 61 L 340 59 L 343 56 L 346 63 L 350 59 L 353 57 L 356 34 L 359 48 L 363 45 L 366 39 L 369 42 L 372 44 L 376 47 L 379 47 L 382 45 L 386 45 L 389 51 L 392 36 L 395 51 L 399 52 L 402 54 L 405 43 L 409 48 L 412 48 L 415 60 L 418 52 L 422 51 L 425 53 L 428 49 L 431 53 L 435 55 L 438 45 L 441 57 L 445 53 L 448 54 L 451 51 L 454 44 L 458 41 L 461 38 L 464 38 L 467 36 L 471 37 L 474 38 L 477 30 L 481 36 L 484 33 L 487 39 L 490 38 L 494 36 L 497 38 L 500 41 L 503 43 L 507 32 L 510 41 L 513 35 L 517 39 L 520 40 L 523 42 L 526 61 L 530 61 L 533 68 L 536 60 L 539 58 L 543 58 L 546 55 L 549 63 L 553 63 L 556 43 L 559 43 L 562 49 L 566 41 L 569 49 L 572 42 L 575 39 L 579 50 L 582 46 L 585 46 L 589 50 L 592 41 L 595 41 L 598 44 L 602 53 L 605 53 L 608 40 L 612 54 L 615 42 L 618 48 L 621 48 L 625 57 L 628 63 L 631 56 L 634 61 L 638 53 L 641 55 L 644 59 L 648 63 L 651 58 L 654 40 L 657 39 L 661 42 L 664 48 L 667 43 L 670 49 L 674 43 L 677 45 L 680 43 L 684 50 L 687 49 L 690 49 L 693 46 L 697 52 L 700 42 L 703 50 L 706 51 L 710 39 L 713 48 L 716 45 L 720 47 L 723 42 L 726 55 L 729 55 L 733 56 L 736 50 L 739 51 L 742 54 L 746 53 L 749 40 L 752 54 L 756 41 L 759 40 L 762 33 L 765 36 L 769 32 L 772 29 L 775 43 L 778 41 L 782 41 L 785 43 L 788 38 L 792 37 L 795 47 L 798 38 L 801 39 L 805 36 L 808 37 L 811 49 L 814 40 L 818 37 L 821 47 L 824 47 L 828 59 L 831 55 L 834 59 L 837 59 L 841 53 L 844 53 L 847 55 L 851 60 L 854 62 L 857 38 L 860 46 L 864 44 L 867 43 L 870 40 L 873 43 L 877 36 L 880 36 L 883 46 L 887 46 L 890 49 L 893 43 L 896 51 L 900 52 L 903 42 L 906 40 L 909 54 L 913 54 L 916 45 L 919 40 L 923 47 L 926 61 L 929 55 L 932 57 L 936 59 L 939 48 L 942 60 L 945 48 L 949 55 L 952 58"
+                                                  transform="translate(0,0)" stroke-width="2"></path>
+                                        </g>
+                                        <g fill="#DA5859" stroke="#DA5859" stroke-width="0" r="6" visibility="hidden"
+                                           class="dxc-markers" opacity="1"></g>
+                                    </g>
+                                    <g class="dxc-labels" transform="translate(0,0)"></g>
+                                </g>
+                            </g>
+                            <g class="dxrs-slidersContainer" clip-path="url(#DevExpress_11)">
+                                <path d="M 32 23 L 32 23 L 32 68 L 32 68 Z M 952 23 L 952 23 L 952 68 L 952 68 Z"
+                                      transform="translate(0,0)" fill="#f5f5f5" fill-opacity="0.75"></path>
+                                <g class="slider" transform="translate(32,23)">
+                                    <path d="M 0 0 L 0 45" transform="translate(0.5,0)" stroke-width="1" stroke="black"
+                                          stroke-opacity="0.1"></path>
+                                    <g class="slider-marker" transform="translate(0,-23)">
+                                        <path d="M 0 0 L 37 0 L 37 19 L 4 19 L 0 23 L 0 19 L 0 19 Z"
+                                              transform="translate(0,0)" fill="#DA5859"></path>
+                                        <text style="white-space:pre;fill:#ffffff;font-size:11px;font-family:'Segoe UI', 'Helvetica Neue', 'Trebuchet MS', Verdana, sans-serif;font-weight:400;cursor:default;"
+                                              x="0" y="0" transform="translate(4,14)" text-anchor="start">01/01
+                                        </text>
+                                        <rect x="0" y="0" width="37" height="23" transform="translate(0,0)"
+                                              class="slider-marker-tracker" fill="#000000" opacity="0.0001"
+                                              style="cursor:pointer;"></rect>
+                                    </g>
+                                </g>
+                                <g class="slider" transform="translate(952,23)">
+                                    <path d="M 0 0 L 0 45" transform="translate(0.5,0)" stroke-width="1" stroke="black"
+                                          stroke-opacity="0.1"></path>
+                                    <g class="slider-marker" transform="translate(0,-23)">
+                                        <path d="M -36 0 L 1 0 L 1 19 L 1 19 L 1 23 L -3 19 L -36 19 Z"
+                                              transform="translate(0,0)" fill="#DA5859"></path>
+                                        <text style="white-space:pre;fill:#ffffff;font-size:11px;font-family:'Segoe UI', 'Helvetica Neue', 'Trebuchet MS', Verdana, sans-serif;font-weight:400;cursor:default;"
+                                              x="0" y="0" transform="translate(-32,14)" text-anchor="start">10/09
+                                        </text>
+                                        <rect x="0" y="0" width="37" height="23" transform="translate(-36,0)"
+                                              class="slider-marker-tracker" fill="#000000" opacity="0.0001"
+                                              style="cursor:pointer;"></rect>
+                                    </g>
+                                </g>
+                            </g>
+                            <g class="dxrs-scale" clip-path="url(#DevExpress_11)">
+                                <g class="dxrs-range-selector-axis" transform="translate(0,0.5)">
+                                    <g class="dxrs-range-selector-elements">
+                                        <text style="white-space:pre;font-size:11px;fill:#808080;font-family:'Segoe UI', 'Helvetica Neue', 'Trebuchet MS', Verdana, sans-serif;font-weight:400;cursor:default;"
+                                              x="32" y="45" transform="translate(0.5,40.5)" text-anchor="middle">January
+                                            2019
+                                        </text>
+                                        <text style="white-space:pre;font-size:11px;fill:#808080;font-family:'Segoe UI', 'Helvetica Neue', 'Trebuchet MS', Verdana, sans-serif;font-weight:400;cursor:default;"
+                                              x="133" y="45" transform="translate(0,40.5)" text-anchor="middle">February
+                                        </text>
+                                        <text style="white-space:pre;font-size:11px;fill:#808080;font-family:'Segoe UI', 'Helvetica Neue', 'Trebuchet MS', Verdana, sans-serif;font-weight:400;cursor:default;"
+                                              x="225" y="45" transform="translate(0,40.5)" text-anchor="middle">March
+                                        </text>
+                                        <text style="white-space:pre;font-size:11px;fill:#808080;font-family:'Segoe UI', 'Helvetica Neue', 'Trebuchet MS', Verdana, sans-serif;font-weight:400;cursor:default;"
+                                              x="327" y="45" transform="translate(0.5,40.5)" text-anchor="middle">April
+                                        </text>
+                                        <text style="white-space:pre;font-size:11px;fill:#808080;font-family:'Segoe UI', 'Helvetica Neue', 'Trebuchet MS', Verdana, sans-serif;font-weight:400;cursor:default;"
+                                              x="425" y="45" transform="translate(-0.5,40.5)" text-anchor="middle">May
+                                        </text>
+                                        <text style="white-space:pre;font-size:11px;fill:#808080;font-family:'Segoe UI', 'Helvetica Neue', 'Trebuchet MS', Verdana, sans-serif;font-weight:400;cursor:default;"
+                                              x="526" y="45" transform="translate(0.5,40.5)" text-anchor="middle">June
+                                        </text>
+                                        <text style="white-space:pre;font-size:11px;fill:#808080;font-family:'Segoe UI', 'Helvetica Neue', 'Trebuchet MS', Verdana, sans-serif;font-weight:400;cursor:default;"
+                                              x="625" y="45" transform="translate(0.5,40.5)" text-anchor="middle">July
+                                        </text>
+                                        <text style="white-space:pre;font-size:11px;fill:#808080;font-family:'Segoe UI', 'Helvetica Neue', 'Trebuchet MS', Verdana, sans-serif;font-weight:400;cursor:default;"
+                                              x="726" y="45" transform="translate(0.5,40.5)" text-anchor="middle">August
+                                        </text>
+                                        <text style="white-space:pre;font-size:11px;fill:#808080;font-family:'Segoe UI', 'Helvetica Neue', 'Trebuchet MS', Verdana, sans-serif;font-weight:400;cursor:default;"
+                                              x="828" y="45" transform="translate(-0.5,40.5)" text-anchor="middle">
+                                            September
+                                        </text>
+                                        <text style="white-space:pre;font-size:11px;fill:#808080;font-family:'Segoe UI', 'Helvetica Neue', 'Trebuchet MS', Verdana, sans-serif;font-weight:400;cursor:default;"
+                                              x="926" y="45" transform="translate(0,40.5)" text-anchor="middle">October
+                                            2019
+                                        </text>
+                                    </g>
+                                    <g class="dxrs-range-selector-line">
+                                        <path d="M 32 23 L 32 68" transform="translate(0.5,0)" stroke="black"
+                                              stroke-width="1" stroke-opacity="0.1" opacity="1"></path>
+                                        <path d="M 133 23 L 133 68" transform="translate(0.5,0)" stroke="black"
+                                              stroke-width="1" stroke-opacity="0.1" opacity="1"></path>
+                                        <path d="M 225 23 L 225 68" transform="translate(0.5,0)" stroke="black"
+                                              stroke-width="1" stroke-opacity="0.1" opacity="1"></path>
+                                        <path d="M 327 23 L 327 68" transform="translate(0.5,0)" stroke="black"
+                                              stroke-width="1" stroke-opacity="0.1" opacity="1"></path>
+                                        <path d="M 425 23 L 425 68" transform="translate(0.5,0)" stroke="black"
+                                              stroke-width="1" stroke-opacity="0.1" opacity="1"></path>
+                                        <path d="M 526 23 L 526 68" transform="translate(0.5,0)" stroke="black"
+                                              stroke-width="1" stroke-opacity="0.1" opacity="1"></path>
+                                        <path d="M 625 23 L 625 68" transform="translate(0.5,0)" stroke="black"
+                                              stroke-width="1" stroke-opacity="0.1" opacity="1"></path>
+                                        <path d="M 726 23 L 726 68" transform="translate(0.5,0)" stroke="black"
+                                              stroke-width="1" stroke-opacity="0.1" opacity="1"></path>
+                                        <path d="M 828 23 L 828 68" transform="translate(0.5,0)" stroke="black"
+                                              stroke-width="1" stroke-opacity="0.1" opacity="1"></path>
+                                        <path d="M 926 23 L 926 68" transform="translate(0.5,0)" stroke="black"
+                                              stroke-width="1" stroke-opacity="0.1" opacity="1"></path>
+                                        <path d="M 952 23 L 952 68" transform="translate(0.5,0)" stroke="black"
+                                              stroke-width="1" stroke-opacity="0.1" opacity="1"></path>
+                                    </g>
+                                    <g class="dxrs-range-selector-title"></g>
+                                </g>
+                            </g>
+                            <g class="dxrs-scale-breaks"></g>
+                            <g class="dxrs-trackers">
+                                <path d="M 32 23 L 952 23 L 952 68 L 32 68 Z" transform="translate(0,0)"
+                                      class="area-tracker" fill="#000000" opacity="0.0001"></path>
+                                <path d="M 32 23 L 952 23 L 952 68 L 32 68 Z" transform="translate(0,0)"
+                                      class="selected-area-tracker" fill="#000000" opacity="0.0001"
+                                      style="cursor:default;"></path>
+                                <rect x="-4" y="0" width="8" height="45" transform="translate(32,23)"
+                                      class="slider-tracker" fill="#000000" opacity="0.0001"
+                                      style="cursor:w-resize;"></rect>
+                                <rect x="-4" y="0" width="8" height="45" transform="translate(952,23)"
+                                      class="slider-tracker" fill="#000000" opacity="0.0001"
+                                      style="cursor:w-resize;"></rect>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="right-arrow disabled" id="nextYear"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+<div id="footer">
+    <div class="wrapper">
+        <div class="content">
+            <div class="text indent">
+                <h2>Your Next Great Web App Starts Here</h2>
+                <p>Download your free <a target="_blank" href="https://js.devexpress.com/Download/">30 day trial</a> of
+                    DevExtreme today</p>
+            </div>
+            <a class="dx-logo" href="https://www.devexpress.com/"></a>
+        </div>
+    </div>
+</div>
+<div id="popup" class="dx-overlay dx-popup dx-widget dx-state-invisible dx-visibility-change-handler">
+    <div class="dx-overlay-content dx-popup-normal" aria-hidden="true" tabindex="0" style="width: 500px; height: auto;">
+        <div class="dx-popup-content"></div>
+    </div>
+</div>
+
+
+<div id="sd_chrome_app" style="display: none;"></div>
+<div at-magnifier-wrapper="">
+    <div class="at-theme-light">
+        <div class="at-base notranslate" translate="no">
+            <div class="Z1-AJ" style="top: 0px; left: 0px;"></div>
+        </div>
+    </div>
+</div>
+</body>
