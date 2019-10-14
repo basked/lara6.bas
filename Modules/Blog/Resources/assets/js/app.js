@@ -1,10 +1,10 @@
 window.Vue = require('vue');
 
 // подключаем Bootstarp
-import 'bootstrap/dist/css/bootstrap.css'
-import 'bootstrap-vue/dist/bootstrap-vue.css'
-import BootstrapVue from 'bootstrap-vue'
-Vue.use(BootstrapVue);
+// import 'bootstrap/dist/css/bootstrap.css'
+// import 'bootstrap-vue/dist/bootstrap-vue.css'
+// import BootstrapVue from 'bootstrap-vue'
+// Vue.use(BootstrapVue);
 
 
 window.axios = require('axios');
@@ -27,24 +27,20 @@ if (token) {
     console.error('CSRF token not found: https://laravel.com/docs/csrf#csrf-x-csrf-token');
 }
 
-
-
-// // Стили DevExtreme
+// Стили DevExtreme
 import 'devextreme/dist/css/dx.common.css';
-import 'devextreme/dist/css/dx.material.lime.dark.css';
+import 'devextreme/dist/css/dx.material.orange.dark.css';
 
 
 
 // подключаем файл для использования метода Route
 // см  ссылку https://medium.com/@sargilla/laravel-named-routes-in-vue-js-components-7b03e96bede8
 
-
-
-
 // Мои компоненты
 // Vue.component('migrations-component', require('./components/MigrationsComponent.vue').default);
 // Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('blog-menu', require('./components/BlogMenu.vue').default);
+Vue.component('blog-tool-bar', require('./components/BlogToolBar').default);
 
 
 
