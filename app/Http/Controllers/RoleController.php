@@ -1,15 +1,18 @@
 <?php
 
+
 namespace App\Http\Controllers;
 
-use DB;
+
 use Illuminate\Http\Request;
-use Spatie\Permission\Models\Permission;
+use App\Http\Controllers\Controller;
 use Spatie\Permission\Models\Role;
+use Spatie\Permission\Models\Permission;
+use DB;
+
 
 class RoleController extends Controller
 {
-
     /**
      * Display a listing of the resource.
      *
@@ -17,10 +20,10 @@ class RoleController extends Controller
      */
     function __construct()
     {
-        $this->middleware('permission:product-list|product-create|product-edit|product-delete', ['only' => ['index','store']]);
-        $this->middleware('permission:product-create', ['only' => ['create','store']]);
-        $this->middleware('permission:product-edit', ['only' => ['edit','update']]);
-        $this->middleware('permission:product-delete', ['only' => ['destroy']]);
+        $this->middleware('permission:role-list|role-create|role-edit|role-delete', ['only' => ['index','store']]);
+        $this->middleware('permission:role-create', ['only' => ['create','store']]);
+        $this->middleware('permission:role-edit', ['only' => ['edit','update']]);
+        $this->middleware('permission:role-delete', ['only' => ['destroy']]);
     }
 
 
@@ -36,6 +39,7 @@ class RoleController extends Controller
             ->with('i', ($request->input('page', 1) - 1) * 5);
     }
 
+
     /**
      * Show the form for creating a new resource.
      *
@@ -46,6 +50,7 @@ class RoleController extends Controller
         $permission = Permission::get();
         return view('roles.create',compact('permission'));
     }
+
 
     /**
      * Store a newly created resource in storage.
@@ -68,7 +73,6 @@ class RoleController extends Controller
         return redirect()->route('roles.index')
             ->with('success','Role created successfully');
     }
-
     /**
      * Display the specified resource.
      *
@@ -85,6 +89,7 @@ class RoleController extends Controller
 
         return view('roles.show',compact('role','rolePermissions'));
     }
+
 
     /**
      * Show the form for editing the specified resource.
@@ -104,6 +109,7 @@ class RoleController extends Controller
         return view('roles.edit',compact('role','permission','rolePermissions'));
     }
 
+
     /**
      * Update the specified resource in storage.
      *
@@ -117,14 +123,19 @@ class RoleController extends Controller
             'name' => 'required',
             'permission' => 'required',
         ]);
+
+
         $role = Role::find($id);
         $role->name = $request->input('name');
         $role->save();
+
+
         $role->syncPermissions($request->input('permission'));
+
+
         return redirect()->route('roles.index')
             ->with('success','Role updated successfully');
     }
-
     /**
      * Remove the specified resource from storage.
      *

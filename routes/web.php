@@ -25,6 +25,9 @@ Route::group(['middleware' => ['auth']], function() {
     Route::resource('roles','RoleController');
     Route::resource('users','UserController');
     Route::resource('products','ProductController');
+
+    Route::resource('shops','ShopController');
+    Route::get('/shops/info','ShopController@info');
 });
 
 // тестовый марщрут
@@ -47,3 +50,7 @@ Route::get('/artisan_create_migrate', function (){
 Route::get('/artisan_migrate', function (){
     Artisan::call('migrate');
 })->name('artisan_migrate');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
